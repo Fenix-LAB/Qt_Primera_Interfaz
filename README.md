@@ -51,4 +51,6 @@ if __name__ == "__main__":
     window.show()
     app.exec_()
 ```
+#### Paso 6:
+DEfinir los ebentos de la interfaz
 
