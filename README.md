@@ -21,3 +21,34 @@ Correr el siguiente comando para convertir el archivo .ui a .py
 pyuic5 -x 'name'.ui -o 'name'.py
 pyuic5 -x GUI.ui -o gui_design.py
 ```
+
+#### Paso 5:
+Crear un archivo .py que llame a la clase de la interfaz
+```python
+class {NAMECLASS}(QtWidgets.QMainWindow, Ui_MainWindow):
+    # Se define le contructor con todos los atributos necesarios y asociacion de metodos
+    def __init__(self, *args, **kwargs):
+        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
+        self.setupUi(self)
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+    window = {NAMECLASS}()
+    window.show()
+    app.exec_()
+```
+Asi queda en mi codigo:
+```python
+class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
+# Se define le contructor con todos los atributos necesarios y asociacion de metodos
+    def __init__(self, *args, **kwargs):
+        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
+        self.setupUi(self)
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+    window = MyApp()
+    window.show()
+    app.exec_()
+```
+
