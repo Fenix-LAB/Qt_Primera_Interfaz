@@ -52,5 +52,8 @@ if __name__ == "__main__":
     app.exec_()
 ```
 #### Paso 6:
-DEfinir los ebentos de la interfaz
+Definir los eventos de la interfaz
+
+#### Paso 7:
+Definir los metodos
 
